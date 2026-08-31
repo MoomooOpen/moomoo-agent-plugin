@@ -1,0 +1,20 @@
+{
+  "name": "moomoo-agent-plugins",
+  "displayName": "moomoo Agent Plugins",
+  "owner": {
+    "name": "moomoo"
+  },
+  "metadata": {
+    "description": "moomoo MCP plugin collection — quotes, stock screening, news, and trading",
+    "version": "1.0.0",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "moomoo-mcp",
+      "source": "https://github.com/MoomooOpen/moomoo-agent-plugin.git",
+      "description": "All-in-one moomoo MCP plugin for quotes, screening, news, and trading",
+      "icon": "../assets/moomoo.png"
+    }
+  ]
+}

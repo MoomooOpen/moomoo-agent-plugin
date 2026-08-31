@@ -1,0 +1,7 @@
+{
+  "mcp_servers": {
+    "moomoo-mcp": {
+      "url": "https://mcp.moomoo.com/mcp"
+    }
+  }
+}

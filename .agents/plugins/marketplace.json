@@ -1,0 +1,23 @@
+{
+  "name": "moomoo-agent-plugins",
+  "interface": {
+    "displayName": "moomoo Agent Plugins"
+  },
+  "plugins": [
+    {
+      "name": "moomoo-mcp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/MoomooOpen/moomoo-agent-plugin.git",
+        "path": "./",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "icon": "../../assets/moomoo.png",
+      "category": "Finance"
+    }
+  ]
+}

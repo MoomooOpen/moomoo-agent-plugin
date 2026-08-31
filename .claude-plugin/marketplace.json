@@ -1,0 +1,19 @@
+{
+  "name": "moomoo-agent-plugins",
+  "owner": {
+    "name": "moomoo",
+    "url": "https://www.moomoo.com"
+  },
+  "plugins": [
+    {
+      "name": "moomoo-mcp",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/MoomooOpen/moomoo-agent-plugin.git"
+      },
+      "description": "All-in-one moomoo MCP plugin for quotes, screening, news, and trading",
+      "icon": "../assets/moomoo.png",
+      "category": "Finance"
+    }
+  ]
+}
