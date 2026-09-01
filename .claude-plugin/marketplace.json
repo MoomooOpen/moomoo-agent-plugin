@@ -1,5 +1,6 @@
 {
   "name": "moomoo-agent-plugins",
+  "icon": "../assets/moomoo.png",
   "owner": {
     "name": "moomoo",
     "url": "https://www.moomoo.com"

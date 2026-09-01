@@ -1,6 +1,6 @@
 {
   "name": "moomoo-mcp",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "moomoo MCP plugin — quotes, stock screening, news, and trading",
   "author": {
     "name": "moomoo",
@@ -28,6 +28,8 @@
     "websiteURL": "https://open.moomoo.com",
     "privacyPolicyURL": "https://www.moomoo.com/about/privacy-policy",
     "termsOfServiceURL": "https://www.moomoo.com/about/condition",
-    "brandColor": "#FF8C00"
+    "brandColor": "#FF8C00",
+    "composerIcon": "./assets/moomoo.png",
+    "logo": "./assets/moomoo.png"
   }
 }

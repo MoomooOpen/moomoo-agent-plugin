@@ -1,17 +1,9 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
     "moomoo-mcp": {
-      "type": "http",
-      "url": "https://mcp.moomoo.com/mcp",
-      "auth": {
-        "type": "oauth2",
-        "issuer": "https://webapi.moomoo.com",
-        "authorization_endpoint": "https://webapi.moomoo.com/oauth2/authorize/confirm",
-        "token_endpoint": "https://webapi.moomoo.com/oauth2/token",
-        "registration_endpoint": "https://webapi.moomoo.com/oauth2/register",
-        "revocation_endpoint": "https://webapi.moomoo.com/oauth2/revoke",
-        "scopes": ["quote:read", "quote:write", "trade:read", "trade:write", "accid:*"],
-        "external_base_url": "https://mcp.moomoo.com"
+      "type": "streamable-http",
+      "url": "https://mcp.moomoo.com/mcp"
       }
     }
   }

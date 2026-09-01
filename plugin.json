@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "moomoo-mcp",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "moomoo MCP plugin — quotes, stock screening, news, and trading",
   "author": {
     "name": "moomoo",

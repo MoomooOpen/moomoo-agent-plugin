@@ -7,9 +7,8 @@
     {
       "name": "moomoo-mcp",
       "source": {
-        "source": "git-subdir",
+        "source": "url",
         "url": "https://github.com/MoomooOpen/moomoo-agent-plugin.git",
-        "path": "./",
         "ref": "main"
       },
       "policy": {
