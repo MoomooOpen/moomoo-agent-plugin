@@ -27,8 +27,8 @@
       "Check my portfolio positions and today's P&L"
     ],
     "websiteURL": "https://open.moomoo.com/",
-    "privacyPolicyURL": "https://www.moomoo.com/about/privacy-policy",
-    "termsOfServiceURL": "https://www.moomoo.com/about/condition",
+    "privacyPolicyURL": "https://www.moomoo.com/privacy",
+    "termsOfServiceURL": "https://www.moomoo.com/terms",
     "brandColor": "#FF8C00"
   }
 }
