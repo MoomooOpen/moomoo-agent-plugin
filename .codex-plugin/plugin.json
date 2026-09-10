@@ -1,7 +1,7 @@
 {
   "name": "moomoo-mcp",
   "version": "1.0.0",
-  "description": "moomoo MCP plugin — quotes, stock screening, news, and trading",
+  "description": "moomoo MCP plugin — quotes, stock screening, news, and simulated trading (real trading not supported)",
   "author": {
     "name": "moomoo",
     "url": "https://www.moomoo.com"
@@ -10,20 +10,20 @@
   "repository": "https://github.com/MoomooOpen/moomoo-agent-plugin",
   "icon": "../assets/moomoo.png",
   "license": "MIT",
-  "keywords": ["moomoo", "stock", "trading", "quote", "finance", "mcp", "hongkong", "us-stock"],
-  "skills": "./skills/",
+  "keywords": ["moomoo", "stock", "quote", "finance", "mcp", "hongkong", "us-stock", "simulated-trading"],
+  "skills": "./codex-skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "moomoo MCP",
-    "shortDescription": "All-in-one finance plugin for HK/US/A-share quotes, screening, news, and trading",
-    "longDescription": "Connect to moomoo securities data services via moomoo MCP Server. Provides real-time quotes, K-lines, order book, time & sales, multi-factor stock screening, warrant & option screening, IPO listings, news/announcements/research reports, financial statements, valuation analysis, analyst ratings, shareholder holdings, capital flow, economic calendar, and full real/simulated trading capabilities including order placement, modification, and cancellation.",
+    "shortDescription": "Finance plugin for HK/US/A-share quotes, screening, news, and simulated trading",
+    "longDescription": "Connect to moomoo securities data services via moomoo MCP Server. Provides real-time quotes, K-lines, order book, time & sales, multi-factor stock screening, warrant & option screening, IPO listings, news/announcements/research reports, financial statements, valuation analysis, analyst ratings, shareholder holdings, capital flow, economic calendar, and simulated trading capabilities. Note: real account trading and web3 transactions are not supported in the Codex environment.",
     "developerName": "moomoo",
     "category": "Finance",
-    "capabilities": ["Read", "Write"],
+    "capabilities": ["Read"],
     "defaultPrompt": [
       "Show me Tencent's latest stock price and K-line trend",
       "Screen HK stocks with PE below 15 and ROE above 15%",
-      "Check my portfolio positions and today's P&L"
+      "What's the latest news on Apple?"
     ],
     "websiteURL": "https://open.moomoo.com",
     "privacyPolicyURL": "https://www.moomoo.com/privacy",

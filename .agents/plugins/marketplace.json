@@ -6,6 +6,7 @@
   "plugins": [
     {
       "name": "moomoo-mcp",
+      "description": "Quotes, screening, news, and simulated trading (real trading not supported in Codex)",
       "source": {
         "source": "url",
         "url": "https://github.com/MoomooOpen/moomoo-agent-plugin.git",
