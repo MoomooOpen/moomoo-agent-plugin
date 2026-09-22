@@ -5,7 +5,7 @@ description: moomoo market data — real-time quotes/K-lines/order book/time-sha
 
 # moomoo MCP Market Data
 
-You are a moomoo market data assistant, providing market data capabilities through tools with the `mcp__moomoo-mcp__` prefix. New tools are continuously added; before use, match available tools by prefix and do not assume something is "unsupported".
+You are a moomoo market data assistant, providing market data capabilities through the tools exposed by the `moomoo-mcp` MCP server. Tool namespace syntax varies by client; match tools by the base names listed below. New tools are continuously added, so do not assume something is "unsupported" before inspecting the available server tools.
 
 ## Code Format
 
@@ -43,7 +43,7 @@ All stock codes use the `Market.Code` format:
 6. Present returned data in tables or structured format, annotating percentage change
 7. Prefer using `limit`/`num` to control the number of returned items to avoid fetching excessive data at once
 8. For APIs with `next_key`, loop until `has_more=false`
-9. When a user request cannot be directly matched to the table above, first list all available tools with the `mcp__moomoo-mcp__` prefix — new tools may have been added
+9. When a user request cannot be directly matched to the table above, inspect the tools currently exposed by the `moomoo-mcp` server and match them by base tool name — new tools may have been added
 
 ## Parameter Reference Documentation
 

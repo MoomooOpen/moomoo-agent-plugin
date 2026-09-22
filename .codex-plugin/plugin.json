@@ -1,6 +1,6 @@
 {
   "name": "moomoo-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "moomoo MCP plugin — quotes, stock screening, news, and simulated trading (real trading not supported)",
   "author": {
     "name": "moomoo",

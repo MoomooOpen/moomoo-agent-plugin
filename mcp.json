@@ -4,7 +4,6 @@
     "moomoo-mcp": {
       "type": "streamable-http",
       "url": "https://mcp.moomoo.com/mcp"
-      }
     }
   }
 }
