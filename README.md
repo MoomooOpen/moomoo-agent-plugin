@@ -1,6 +1,6 @@
 # moomoo MCP Plugin
 
-All-in-one MCP plugin for moomoo — quotes, stock screening, news, and trading. Compatible with **Claude Code**, **Cursor**, **Codex**, and the **Agent Plugins** open standard.
+All-in-one MCP plugin for moomoo — quotes, stock screening, news, and trading. Compatible with **Grok Build**, **Claude Code**, **Cursor**, **Codex**, and the **Agent Plugins** open standard.
 
 ## Directory Structure
 
@@ -56,6 +56,7 @@ moomoo-agent-plugin/
 
 | Platform | Manifest | MCP Config | Marketplace |
 |----------|----------|------------|-------------|
+| **Grok Build** | Root `plugin.json` | `.mcp.json` | xAI Plugin Marketplace (after approval) |
 | **Claude Code** | `.claude-plugin/plugin.json` | `.mcp.json` | `.claude-plugin/marketplace.json` |
 | **Cursor** | `.cursor-plugin/plugin.json` | `mcp.json` | `.cursor-plugin/marketplace.json` |
 | **Codex** | `.codex-plugin/plugin.json` | `.mcp.json` | `.agents/plugins/marketplace.json` |
@@ -71,9 +72,34 @@ All platforms connect to the same remote MCP service:
 https://mcp.moomoo.com/mcp
 ```
 
-Protocol: Streamable HTTP (Claude Code / Cursor) / HTTP (Codex)
+Protocol: Streamable HTTP (some clients display this as HTTP)
+
+## Authentication, Permissions, and Network Access
+
+The hosted MCP server uses an OAuth authorization-code flow with PKCE. Users authenticate on Moomoo-owned pages and authorize access for their own eligible account. Passwords and MFA codes are entered only on Moomoo pages; this repository contains no user credentials, API keys, OAuth tokens, executables, install scripts, or lifecycle hooks. The MCP client stores OAuth tokens according to that client's own credential-storage policy.
+
+Runtime network endpoints:
+
+- `https://mcp.moomoo.com/mcp` — MCP requests and OAuth protected-resource discovery
+- `https://webapi.moomoo.com/oauth2/*` — OAuth client registration, authorization, token, and revocation operations
+- `https://passport.moomoo.com` — Moomoo sign-in and MFA during authorization
+- `https://open.moomoo.com` — product documentation and account authorization pages
+
+The service advertises quote read/write, trade read/write, and account-scoped permissions. The authorization screen is the source of truth for the access requested in a particular client session. Do not continue if the requested access exceeds what you intend to use.
+
+Depending on the tools used, requests may include security symbols and query parameters, or account identifiers, balances, positions, order details, and execution records. This data is sent to Moomoo's hosted MCP service to fulfill the user's request; it is not stored in this repository.
+
+## Trading Safety and Availability
+
+This plugin includes simulated trading and, for eligible users, real-money order placement, modification, cancellation, and confirmation. Trading can result in financial loss and is not investment advice. Product, market-data, and trading availability depend on region, account eligibility, subscriptions, and the OAuth permissions granted by the user.
+
+Before every trading operation, the agent instructions require the client to identify whether the selected account is real or simulated, display the complete order details, and obtain a new explicit confirmation from the user. Blanket, historical, or inferred confirmation must not be reused. When the server returns `need_order_confirm=true`, the operation requires an additional risk-control confirmation before it takes effect. The server remains responsible for enforcing account permissions and risk controls.
 
 ## Installation
+
+### Grok Build
+
+After marketplace approval, open `/marketplace` in Grok Build and install `moomoo-mcp`. For local testing from a checked-out copy, start Grok Build with `--plugin-dir /path/to/moomoo-agent-plugin`.
 
 ### Claude Code
 

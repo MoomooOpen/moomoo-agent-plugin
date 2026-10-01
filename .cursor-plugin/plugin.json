@@ -1,7 +1,7 @@
 {
   "name": "moomoo-mcp",
   "displayName": "moomoo MCP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "All-in-one moomoo MCP plugin for multi-market quotes and trading. Provides real-time data across HK, US, A-share, SG, JP, and CA markets via moomoo MCP Server, covering K-lines, capital flow, option chains, financials, research reports, institutional holdings, economic calendar, and more.",
   "author": {
     "name": "moomoo",
